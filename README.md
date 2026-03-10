@@ -2,14 +2,10 @@
 
 Get a bird's-eye view of line counts in your codebase. linnet recursively scans directories, counts lines per file, and renders a colour-coded tree so you can spot oversized or deeply-nested files at a glance.
 
-## Prerequisites
-
-Requires [Bun](https://bun.sh). linnet executes TypeScript directly via Bun, so it does not work with Node.js alone.
-
 ## Usage
 
 ```bash
-bunx @nestling.dev/linnet [options] [paths...]
+npx @nestling.dev/linnet [options] [paths...]
 ```
 
 When no paths are given, the current working directory is used.

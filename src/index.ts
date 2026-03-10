@@ -1,4 +1,3 @@
-#!/usr/bin/env bun
 import { program } from "commander";
 import * as path from "node:path";
 import * as fs from "node:fs";

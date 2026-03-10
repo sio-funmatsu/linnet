@@ -39,7 +39,7 @@ export function maxIndentLevel(filePath: string): number {
       break;
     }
     const m = line.match(/^( +)\S/);
-    if (m) minSpaceIndent = Math.min(minSpaceIndent, m[1].length);
+    if (m) minSpaceIndent = Math.min(minSpaceIndent, m[1]!.length);
   }
 
   const unit = usesTabs ? 1 : (minSpaceIndent === Infinity ? 2 : minSpaceIndent);

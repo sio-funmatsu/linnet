@@ -5,7 +5,7 @@
   },
   "description": "Get a bird's-eye view of the line counts",
   "version": "0.0.2",
-  "files": ["src"],
+  "files": ["dist"],
   "author": "Fumiaki Kinoshita <fumiexcel@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -13,10 +13,13 @@
     "url": "https://github.com/fumieval/linnet.git"
   },
   "keywords": ["cli", "lines", "tree"],
-  "module": "src/index.ts",
   "type": "module",
   "bin": {
-    "linnet": "src/index.ts"
+    "linnet": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "tsup"
   },
   "dependencies": {
     "commander": "^12",
@@ -25,6 +28,8 @@
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/node": "^25.4.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
   }
 }
